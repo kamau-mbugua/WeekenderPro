@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -47,11 +46,11 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
         public ImageView meventImage;*/
 
 
-        holder.meventVenue.setText("Location :" + currentEvent.getEventVenue());
-        holder.meventTitle.setText("Hotel Name :" + currentEvent.getEventTitle());
+        holder.meventVenue.setText("Venue :" + currentEvent.getEventVenue());
+        holder.meventTitle.setText("Event Title :" + currentEvent.getEventTitle());
         holder.mratings.setText("Ratings :" + currentEvent.getRatings());
-        holder.meventType.setText("TagList :" + currentEvent.getEventType());
-        holder.tvPrice.setText("Price per Day: Ksh."+" "+currentEvent.getEventPrice());
+        holder.meventType.setText("EventType :" + currentEvent.getEventType());
+        holder.tvPrice.setText("Price : KES."+" "+currentEvent.getEventPrice());
         holder.meventContacts.setText(currentEvent.getEventContacts());
         holder.meventDate.setText(currentEvent.getEventDate());
         holder.meventTime.setText(currentEvent.getEventTime());
@@ -69,17 +68,17 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
         holder.clickedLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent passIntent = new Intent(mContext, HotelDetail.class);
-                passIntent.putExtra("hotelLocation1", currentHotel.getHotelLocation());
-                passIntent.putExtra("hotelName1", currentHotel.getHotelName());
-                passIntent.putExtra("hotelRating1", currentHotel.getHotelRating());
-                passIntent.putExtra("hotelListTag1", currentHotel.getHotelListTag());
-                passIntent.putExtra("imageUri1", currentHotel.getImageUri());
-                passIntent.putExtra("email1", currentHotel.getImageUri());
-                passIntent.putExtra("phone1", currentHotel.getImageUri());
-                passIntent.putExtra("mapUrl1", currentHotel.getImageUri());
-                passIntent.putExtra("websiteUrl1", currentHotel.getImageUri());
-                passIntent.putExtra("hotelPricePerHour1", currentHotel.getHotelPricePerHour());
+                Intent passIntent = new Intent(mContext, EventDetail.class);
+                passIntent.putExtra("eventLocation1", currentEvent.getEventVenue());
+                passIntent.putExtra("eventName1", currentEvent.getEventTitle());
+                passIntent.putExtra("eventRating1", currentEvent.getRatings());
+                passIntent.putExtra("eventType1", currentEvent.getEventType());
+                passIntent.putExtra("imageUri1", currentEvent.getImageUri());
+                passIntent.putExtra("eventPrice1", currentEvent.getEventPrice());
+                passIntent.putExtra("eventContacts1", currentEvent.getEventContacts());
+                passIntent.putExtra("eventDate1", currentEvent.getEventDate());
+                passIntent.putExtra("evenTime1", currentEvent.getEventTime());
+                passIntent.putExtra("eventDescription1", currentEvent.getEventDescription());
 
 
                 mContext.startActivity(passIntent);
