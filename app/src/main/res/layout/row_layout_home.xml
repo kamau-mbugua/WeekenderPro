@@ -67,7 +67,7 @@
                 <TextView
                     android:id="@+id/hotelName"
                     android:layout_width="wrap_content"
-                    android:text="Hotel Name"
+                    android:text="Event Title"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -89,7 +89,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@id/hotelBookButton"
                     android:gravity="center"
-                    android:text="Hotel Location" />
+                    android:text="Event Venue" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/hotelBookButton"
@@ -126,7 +126,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Hotel Tag List" />
+                android:text="Event Type" />
 
 
 
@@ -147,7 +147,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Hotel Price" />
+                android:text="Event Price" />
 
 
 
@@ -167,12 +167,12 @@
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@id/tvMapUrl"
                 android:layout_gravity="center"
-                android:text="Hotel phone" />
+                android:text="Event Date" />
 
             <TextView
                 android:id="@+id/tvemail"
                 android:layout_width="wrap_content"
-                android:text="Hotel email"
+                android:text="Event Time"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -182,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvwebsite"
                 android:layout_gravity="center"
-                android:text="Hotel website"
+                android:text="Event Description"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/tvemail"/>
 
@@ -193,7 +193,7 @@
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Map Url" />
+                android:text="Organizer Contacts" />
 
         </LinearLayout>
 
