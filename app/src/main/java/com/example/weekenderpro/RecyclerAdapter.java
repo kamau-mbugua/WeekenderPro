@@ -41,25 +41,29 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: align to recycler...");
-        final Events currentHotel = eventss.get(position);
+        final Events currentEvent = eventss.get(position);
 
-        holder.hotelLocation.setText("Location :" + currentHotel.getHotelLocation());
-        holder.hotelName.setText("Hotel Name :" + currentHotel.getHotelName());
-        holder.ratings.setText("Ratings :" + currentHotel.getHotelRating());
-        holder.tagsList.setText("TagList :" + currentHotel.getHotelListTag());
-        holder.tvPrice.setText("Price per Day: Ksh."+" "+currentHotel.getHotelPricePerHour());
-        holder.tvMapUrl.setText(currentHotel.getMapUrl());
-        holder.tvPhone.setText(currentHotel.getPhone());
-        holder.tvemail.setText(currentHotel.getEmail());
-        holder.tvwebsite.setText(currentHotel.getWebsiteUrl());
+       /* mratings, meventVenue, meventTitle, meventType, meventDate, meventTime,meventDescription,meventContacts,tvPrice;
+        public ImageView meventImage;*/
+
+
+        holder.meventVenue.setText("Location :" + currentEvent.getEventVenue());
+        holder.meventTitle.setText("Hotel Name :" + currentEvent.getEventTitle());
+        holder.mratings.setText("Ratings :" + currentEvent.getRatings());
+        holder.meventType.setText("TagList :" + currentEvent.getEventType());
+        holder.tvPrice.setText("Price per Day: Ksh."+" "+currentEvent.getEventPrice());
+        holder.meventContacts.setText(currentEvent.getEventContacts());
+        holder.meventDate.setText(currentEvent.getEventDate());
+        holder.meventTime.setText(currentEvent.getEventTime());
+        holder.meventDescription.setText(currentEvent.getEventDescription());
 
 
         Picasso.get()
-                .load(currentHotel.getImageUri())
+                .load(currentEvent.getImageUri())
                 .placeholder(R.drawable.placeholder)
                 .fit()
                 .centerCrop()
-                .into(holder.hotelImage);
+                .into(holder.meventImage);
 
 
         holder.clickedLayout.setOnClickListener(new View.OnClickListener() {
@@ -100,23 +104,23 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView ratings, hotelLocation, hotelName, tagsList, tvPhone, tvemail,tvwebsite,tvMapUrl,tvPrice;
-        public ImageView hotelImage;
+        public TextView mratings, meventVenue, meventTitle, meventType, meventDate, meventTime,meventDescription,meventContacts,tvPrice;
+        public ImageView meventImage;
         CardView clickedLayout;
 
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
-            ratings = itemView.findViewById(R.id.ratings);
-            hotelLocation = itemView.findViewById(R.id.hotelLocation);
-            hotelName = itemView.findViewById(R.id.hotelName);
-            tagsList = itemView.findViewById(R.id.tagsList);
-            hotelImage = itemView.findViewById(R.id.hotelImage);
-            clickedLayout = itemView.findViewById(R.id.hotelCard);
-            tvMapUrl = itemView.findViewById(R.id.tvMapUrl);
-            tvPhone= itemView.findViewById(R.id.tvPhone);
-            tvemail=itemView.findViewById(R.id.tvemail);
-            tvwebsite = itemView.findViewById(R.id.tvwebsite);
+            mratings = itemView.findViewById(R.id.ratings);
+            meventVenue = itemView.findViewById(R.id.eventVenue);
+            meventTitle = itemView.findViewById(R.id.eventTitle);
+            meventType = itemView.findViewById(R.id.eventType);
+            meventImage = itemView.findViewById(R.id.eventImage);
+            clickedLayout = itemView.findViewById(R.id.eventCard);
+            meventContacts = itemView.findViewById(R.id.eventContacts);
+            meventDate= itemView.findViewById(R.id.eventDate);
+            meventTime=itemView.findViewById(R.id.eventTime);
+            meventDescription = itemView.findViewById(R.id.eventDescription);
             tvPrice = itemView.findViewById(R.id.tvPrice);
 
 
