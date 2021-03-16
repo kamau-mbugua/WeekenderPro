@@ -12,11 +12,12 @@ public class Events {
     private String eventVenue;
     private String eventDescription;
     public String eventContacts;
+    public  String ratings;
 
     public Events() {
     }
 
-    public Events(String imageUri, String eventPrice, String eventType, String eventTime, String key, String ID, String eventDate, String eventTitle, String eventVenue, String eventDescription, String eventContacts) {
+    public Events(String imageUri, String eventPrice, String eventType, String eventTime, String key, String ID, String eventDate, String eventTitle, String eventVenue, String eventDescription, String eventContacts, String ratings) {
         this.imageUri = imageUri;
         this.eventPrice = eventPrice;
         this.eventType = eventType;
@@ -28,6 +29,15 @@ public class Events {
         this.eventVenue = eventVenue;
         this.eventDescription = eventDescription;
         this.eventContacts = eventContacts;
+        this.ratings = ratings;
+    }
+
+    public String getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(String ratings) {
+        this.ratings = ratings;
     }
 
     public String getEventContacts() {
