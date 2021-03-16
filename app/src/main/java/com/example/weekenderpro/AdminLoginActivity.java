@@ -37,7 +37,7 @@ public class AdminLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SetValidation();
-                Intent intent = new Intent(getApplicationContext(), AddEventActivity.class);
+                Intent intent = new Intent(getApplicationContext(), AddEventsActivity.class);
                 startActivity(intent);
             }
         });
