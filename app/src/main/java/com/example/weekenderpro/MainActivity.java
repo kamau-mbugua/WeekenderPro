@@ -24,7 +24,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), HotelListActivity.class));
+                startActivity(new Intent(getApplicationContext(), EventListActivity.class));
                 finish();
             }
         });
@@ -32,7 +32,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
         extended_fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), AddHotelActivity.class));
+                startActivity(new Intent(getApplicationContext(), AdminLoginActivity.class));
                 finish();
                 return;
             }
