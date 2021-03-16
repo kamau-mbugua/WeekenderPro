@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "610335605576",
+    "project_id": "weekenderpro-e5fa2",
+    "storage_bucket": "weekenderpro-e5fa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610335605576:android:cb5d89926031297b80697d",
+        "android_client_info": {
+          "package_name": "com.example.weekenderpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610335605576-iptd0itcilhd14i2cat5o9mn9jiv330l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.weekenderpro",
+            "certificate_hash": "0dfabd887f78610642fc1a13e7955ff4601cfd38"
+          }
+        },
+        {
+          "client_id": "610335605576-u5tr1h7t7s3oaq4koh1m9t5nro02ok1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl9s5UKVX-ZeftdaWKFG7Os0_EHq3H9CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610335605576-u5tr1h7t7s3oaq4koh1m9t5nro02ok1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
