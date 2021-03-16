@@ -179,7 +179,7 @@
                         android:textColor="#0C0C0C" />
 
                     <TextView
-                        android:id="@+id/tvHotelPrice"
+                        android:id="@+id/tvEventPrice"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
