@@ -17,6 +17,8 @@ public class EventListActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private ValueEventListener mDBListener;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
