@@ -32,6 +32,20 @@ public class Events {
         this.ratings = ratings;
     }
 
+    public Events(String mEventLocation, String mEventName, String mEventRating, String mEventPrice, String mEventDate, String mEventContacts, String mEventDescription, String mEventTime, String mEventType, String sImage) {
+        this.imageUri = sImage;
+        this.eventPrice = mEventPrice;
+        this.eventType = mEventType;
+        this.eventTime = mEventTime;
+        this.eventDate = mEventDate;
+        this.eventTitle = mEventName;
+        this.eventVenue = mEventLocation;
+        this.eventDescription = mEventDescription;
+        this.eventContacts = mEventContacts;
+        this.ratings = mEventRating;
+    }
+
+
     public String getRatings() {
         return ratings;
     }

@@ -1,9 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddEventsActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/ivBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ivBack">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:padding="16sp"
+            android:scrollbarSize="25sp"
+            tools:context=".AddEventsActivity">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+                <ImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/placeholder"
+                    android:layout_height="130dp" />
+
+                <TextView
+                    android:id="@+id/tvUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Click Here to Add Event Picture/ Flayer"
+                    android:textColor="@color/black"
+                    android:background="@color/teal_200"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <EditText
+                    android:id="@+id/etLocation"
+                    android:hint="Location: City/ Town"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="textPersonName"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <EditText
+                    android:id="@+id/etEventName"
+                    android:hint="Name of Event"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="textPersonName"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <EditText
+                    android:id="@+id/etRating"
+                    android:hint="Event  Rating"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="number"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <EditText
+                    android:id="@+id/etEventType"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Event Type"
+                    android:inputType="textPersonName"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+                <EditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Price of The Event"
+                    android:inputType="number"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <EditText
+                    android:id="@+id/etEventContacts"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <EditText
+                    android:id="@+id/etEventDate"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Date"
+                    android:inputType="date"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <EditText
+                    android:id="@+id/etEventTime"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Time of The Event"
+                    android:inputType="time"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+
+                <EditText
+                    android:id="@+id/etEventDescription"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/edittextdesign"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="Event Description"
+                    android:inputType="textPersonName"
+                    android:textColor="#FF0000"
+                    android:textColorHint="#FF0000"/>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:background="#24a0ed"
+                    android:text="Save Hotel"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
