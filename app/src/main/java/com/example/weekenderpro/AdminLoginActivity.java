@@ -37,8 +37,7 @@ public class AdminLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SetValidation();
-                Intent intent = new Intent(getApplicationContext(), AddEventsActivity.class);
-                startActivity(intent);
+
             }
         });
 
@@ -81,8 +80,10 @@ public class AdminLoginActivity extends AppCompatActivity {
 
         if (isEmailValid && isPasswordValid) {
             Toast.makeText(getApplicationContext(), "Successfully Logged In", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), AddEventsActivity.class);
+            startActivity(intent);
         }
 
     }
-    }
+
 }
